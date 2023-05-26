@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwimSmart</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <header class="header">
+        <center><h1>SwimSmart</h1></center>
+    </header>
+    <!-- 添加新的卡片容器 -->
+    <div id="total-distance-card" class="card"></div>
+    <button onclick="showModal('user-info-modal')">Start</button>
+    <button onclick="showModal('add-swim-modal')">Add Record</button>
+    <div id="card-container"></div>
+
+    <!-- User Info Modal -->
+    <div id="user-info-modal" class="modal">
+        <div class="modal-content">
+            <label>Gender：</label>
+            <select id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br>
+            <label>Height（Cm）：</label>
+            <input id="height" type="number"><br>
+            <label>Weight（Kg）：</label>
+            <input id="weight" type="number"><br>
+            <label>Calories Goal：</label>
+            <input id="calorie-goal" type="number"><br>
+            <button onclick="saveUserInfo()">Save</button>
+        </div>
+    </div>
+
+    <!-- Add Swim Modal -->
+    <div id="add-swim-modal" class="modal">
+        <div class="modal-content">
+            <label>Duration（Min）：</label>
+            <input id="duration" type="number"><br>
+            <label>Distance（Meter）：</label>
+            <input id="distance" type="number"><br>
+            <button onclick="addSwim()">Record</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
